@@ -119,8 +119,6 @@ this repository are maintained by the BanzhafAD authors and contributors.
 This project is independently maintained and is not affiliated with,
 sponsored by, or endorsed by TheDatumOrg or the original TSB-AD authors.
 
-For detailed third-party attribution and licensing information, see
-[`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
 
 ## Citation
 
