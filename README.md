@@ -1,24 +1,43 @@
 # BanzhafAD: Cooperative Banzhaf Interaction Modeling for Interpretable Multivariate Time-Series Anomaly Detection
 
-
 ## Get Started
 
 ### 1. Dataset
 
-The datasets used in this project were obtained through the
+The datasets used in this project are sourced from the
 [TSB-AD](https://github.com/TheDatumOrg/TSB-AD) benchmark collection.
 
-The dataset files should be placed in the following directory:
+After downloading the datasets, place the dataset files in the following
+directory:
 
+```text
 BanzhafAD/Datasets/
+```
 
-The datasets are included for research, benchmarking, and reproducibility
+When working from the root directory of this repository, the corresponding
+relative path is:
+
+```text
+Datasets/
+```
+
+The expected project structure is:
+
+```text
+BanzhafAD/
+├── Datasets/
+├── run_all_models_TSB_AD_aligned.py
+├── requirements.txt
+└── ...
+```
+
+The datasets are used for research, benchmarking, and reproducibility
 purposes. Although TSB-AD provides a curated benchmark collection, the
 copyright, license terms, citation requirements, and usage restrictions of
 each dataset remain with their respective original providers.
 
-Before redistributing the datasets or using them for commercial purposes,
-please review:
+Before redistributing a dataset or using it for commercial purposes, please
+review:
 
 * The original dataset source.
 * The dataset-specific license.
@@ -30,27 +49,53 @@ original dataset sources and the TSB-AD paper.
 
 ### 2. Installation
 
-#### Step 1: Create a Conda Environment
+#### Step 1: Enter the Project Directory
 
-Create a Python 3.11 virtual environment:
+From the directory containing the cloned repository, enter the project
+directory:
 
 ```bash
-conda create -p BanzhafAD python=3.11 -y
+cd BanzhafAD
+```
+
+Do not use the following command unless the repository is actually located
+directly under the system root directory:
+
+```bash
+cd /BanzhafAD
+```
+
+To confirm that you are in the correct directory, run:
+
+```bash
+pwd
+ls
+```
+
+The project directory should contain files such as:
+
+```text
+requirements.txt
+run_all_models_TSB_AD_aligned.py
+Datasets/
+```
+
+#### Step 2: Create a Conda Environment
+
+Create a Conda environment with Python 3.11:
+
+```bash
+conda create -n banzhafad python=3.11 -y
 ```
 
 Activate the environment:
 
 ```bash
-conda activate BanzhafAD
+conda activate banzhafad
 ```
 
-#### Step 2: Enter the Project Directory
-
-Change to the project source directory:
-
-```bash
-cd /BanzhafAD
-```
+Using the environment name `banzhafad` avoids conflicts with the project
+directory named `BanzhafAD`.
 
 #### Step 3: Install Dependencies
 
@@ -72,16 +117,33 @@ Install the project in editable mode:
 pip install -e .
 ```
 
+> If this repository does not contain a `pyproject.toml` or `setup.py` file,
+> the editable installation command may be omitted.
+
 #### Step 4: Run the Project
 
-Run time-series anomaly detection:
+运行代码：
 
 ```bash
 python run_all_models_TSB_AD_aligned.py
 ```
 
+Make sure that the datasets have been placed in the `Datasets/` directory
+before running the script.
 
+#### Step 5: Remove the Conda Environment
 
+Deactivate the environment:
+
+```bash
+conda deactivate
+```
+
+Remove the environment when it is no longer needed:
+
+```bash
+conda env remove -n banzhafad -y
+```
 
 ## Acknowledgements
 
@@ -94,12 +156,14 @@ TSB-AD is distributed under the
 [Apache License 2.0](https://github.com/TheDatumOrg/TSB-AD/blob/main/LICENSE).
 
 The original TSB-AD authors and contributors retain copyright over the
-original portions of the software. 
+original portions of the software. Any modifications and additional code in
+this repository are maintained by the BanzhafAD authors and contributors.
 
-This project is independently maintained and is not affiliated with, sponsored
-by, or endorsed by TheDatumOrg or the original TSB-AD authors.
+This project is independently maintained and is not affiliated with,
+sponsored by, or endorsed by TheDatumOrg or the original TSB-AD authors.
 
-
+For detailed third-party attribution and licensing information, see
+[`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
 
 ## Citation
 
@@ -114,4 +178,3 @@ paper:
   year      = {2024}
 }
 ```
-
