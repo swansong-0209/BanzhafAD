@@ -2,25 +2,91 @@
 BanzhafAD: Cooperative Banzhaf Interaction Modeling for Interpretable Multivariate Time-Series Anomaly Detection
 
 
-## Dataset Source
+## Get Started
+
+### 1. Dataset
 
 The datasets used in this project were obtained through the
-[TSB-AD](https://github.com/TheDatumOrg/TSB-AD) benchmark collection and are
-stored in the following directory:
+[TSB-AD](https://github.com/TheDatumOrg/TSB-AD) benchmark collection.
 
-* [`BanzhafAD/Datasets`](BanzhafAD/Datasets)
+The dataset files are stored in:
+
+```text
+BanzhafAD/Datasets/
+```
+
+You can access them from the repository through:
+
+[`BanzhafAD/Datasets`](BanzhafAD/Datasets)
 
 The datasets are included for research, benchmarking, and reproducibility
-purposes. TSB-AD provides a curated collection of datasets, but the copyright,
-license terms, citation requirements, and usage restrictions of each dataset
-remain with its respective original provider.
+purposes. Although TSB-AD provides a curated benchmark collection, the
+copyright, license terms, citation requirements, and usage restrictions of
+each dataset remain with their respective original providers.
 
-Users should review the corresponding dataset documentation and original data
-sources before redistributing the datasets or using them for commercial
-purposes.
+Before redistributing the datasets or using them for commercial purposes,
+please review:
 
-When using these datasets in academic work, please cite both the original
-dataset sources, where applicable, and the TSB-AD paper.
+* The original dataset source.
+* The dataset-specific license.
+* The required academic citations.
+* Any redistribution or commercial-use restrictions.
+
+When using these datasets in academic work, please cite both the relevant
+original dataset sources and the TSB-AD paper.
+
+### 2. Installation
+
+#### Step 1: Create a Conda Environment
+
+Create a Python 3.11 virtual environment:
+
+```bash
+conda create -p /root/BanzhafAD python=3.11 -y
+```
+
+Activate the environment:
+
+```bash
+conda activate /root/BanzhafAD
+```
+
+#### Step 2: Enter the Project Directory
+
+Change to the project source directory:
+
+```bash
+cd /root/TSB-AD-main
+```
+
+#### Step 3: Install Dependencies
+
+Upgrade `pip`:
+
+```bash
+python -m pip install --upgrade pip
+```
+
+Install the required Python packages:
+
+```bash
+pip install -r requirements.txt
+```
+
+Install the project in editable mode:
+
+```bash
+pip install -e .
+```
+
+#### Step 4: Run the Project
+
+Run the default time-series anomaly detection example:
+
+```bash
+python run_all_models_TSB_AD_aligned.py
+```
+
 
 
 
