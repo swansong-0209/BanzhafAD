@@ -9,15 +9,9 @@ BanzhafAD: Cooperative Banzhaf Interaction Modeling for Interpretable Multivaria
 The datasets used in this project were obtained through the
 [TSB-AD](https://github.com/TheDatumOrg/TSB-AD) benchmark collection.
 
-The dataset files are stored in:
+The dataset files should be placed in the following directory:
 
-```text
 BanzhafAD/Datasets/
-```
-
-You can access them from the repository through:
-
-[`BanzhafAD/Datasets`](BanzhafAD/Datasets)
 
 The datasets are included for research, benchmarking, and reproducibility
 purposes. Although TSB-AD provides a curated benchmark collection, the
@@ -42,13 +36,13 @@ original dataset sources and the TSB-AD paper.
 Create a Python 3.11 virtual environment:
 
 ```bash
-conda create -p /root/BanzhafAD python=3.11 -y
+conda create -p BanzhafAD python=3.11 -y
 ```
 
 Activate the environment:
 
 ```bash
-conda activate /root/BanzhafAD
+conda activate BanzhafAD
 ```
 
 #### Step 2: Enter the Project Directory
@@ -56,7 +50,7 @@ conda activate /root/BanzhafAD
 Change to the project source directory:
 
 ```bash
-cd /root/TSB-AD-main
+cd /BanzhafAD
 ```
 
 #### Step 3: Install Dependencies
@@ -81,7 +75,7 @@ pip install -e .
 
 #### Step 4: Run the Project
 
-Run the default time-series anomaly detection example:
+Run time-series anomaly detection:
 
 ```bash
 python run_all_models_TSB_AD_aligned.py
