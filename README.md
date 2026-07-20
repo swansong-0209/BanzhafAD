@@ -73,31 +73,29 @@ Activate the environment:
 conda activate banzhafad
 ```
 
-Using the environment name `banzhafad` avoids conflicts with the project
-directory named `BanzhafAD`.
-
 #### Step 3: Install Dependencies
 
-Upgrade `pip`:
+Install PyTorch with CUDA 12.1 support:
 
 ```bash
-python -m pip install --upgrade pip
+pip install torch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1 --index-url https://download.pytorch.org/whl/cu121
 ```
 
-Install the required Python packages:
+For other CUDA versions or installation methods, refer to the
+[PyTorch previous versions page](https://pytorch.org/get-started/previous-versions/).
+
+Install the remaining required Python packages:
 
 ```bash
-pip install -r requirements.txt
+pip install scikit-learn tqdm pandas statsmodels
 ```
 
-Install the project in editable mode:
+To verify that PyTorch and CUDA are available, run:
 
 ```bash
-pip install -e .
+python -c "import torch; print('PyTorch:', torch.__version__); print('CUDA available:', torch.cuda.is_available()); print('CUDA version:', torch.version.cuda)"
 ```
 
-> If this repository does not contain a `pyproject.toml` or `setup.py` file,
-> the editable installation command may be omitted.
 
 #### Step 4: Run the Project
 
