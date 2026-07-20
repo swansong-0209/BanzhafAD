@@ -59,28 +59,6 @@ directory:
 cd BanzhafAD
 ```
 
-Do not use the following command unless the repository is actually located
-directly under the system root directory:
-
-```bash
-cd /BanzhafAD
-```
-
-To confirm that you are in the correct directory, run:
-
-```bash
-pwd
-ls
-```
-
-The project directory should contain files such as:
-
-```text
-requirements.txt
-run_all_models_TSB_AD_aligned.py
-Datasets/
-```
-
 #### Step 2: Create a Conda Environment
 
 Create a Conda environment with Python 3.11:
