@@ -27,6 +27,7 @@ The expected project structure is:
 BanzhafAD/
 ├── Datasets/
 ├── run_all_models_TSB_AD_aligned.py
+├── TSB_AD/
 ├── requirements.txt
 └── ...
 ```
