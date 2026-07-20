@@ -90,7 +90,7 @@ python -c "import torch; print('PyTorch:', torch.__version__); print('CUDA avail
 ```
 
 
-#### Step 4: Run the Project
+#### Step 4: Run BanzhafAD
 
 运行代码：
 
