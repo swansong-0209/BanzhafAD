@@ -14,13 +14,6 @@ directory:
 BanzhafAD/Datasets/
 ```
 
-When working from the root directory of this repository, the corresponding
-relative path is:
-
-```text
-Datasets/
-```
-
 The expected project structure is:
 
 ```text
@@ -108,19 +101,6 @@ python run_all_models_TSB_AD_aligned.py
 Make sure that the datasets have been placed in the `Datasets/` directory
 before running the script.
 
-#### Step 5: Remove the Conda Environment
-
-Deactivate the environment:
-
-```bash
-conda deactivate
-```
-
-Remove the environment when it is no longer needed:
-
-```bash
-conda env remove -n banzhafad -y
-```
 
 ## Acknowledgements
 
