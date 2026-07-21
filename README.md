@@ -92,7 +92,7 @@ python -c "import torch; print('PyTorch:', torch.__version__); print('CUDA avail
 
 #### Step 4: Run BanzhafAD
 
-运行代码：
+run BanzhafAD：
 
 ```bash
 python run_all_models_TSB_AD_aligned.py
