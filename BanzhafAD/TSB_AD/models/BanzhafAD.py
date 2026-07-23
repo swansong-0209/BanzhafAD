@@ -298,7 +298,6 @@ class BanzhafAD:
                 physical_error = torch.mean(topk_values ** 2, dim=-1)
                 error_np = physical_error.cpu().numpy()
 
-
                 # Smoothly project window scores back onto time steps across time series
                 for b in range(len(error_np)):
                     global_start = i + b
