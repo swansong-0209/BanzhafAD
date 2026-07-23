@@ -329,10 +329,10 @@ def main():
                     all_rounds_failures[model_name][round_idx] = logs
 
         # Final Summary: Mean ± Std across all rounds
-        print("\n" + "★" * 60)
-        print(f"★    Final Summary: {dataset_name} | {N_REPEATS} Rounds Mean ± Std   ")
-        print(f"★  Official Expected Files: {official_expected_count} | Found Local Files: {len(file_list)}")
-        print("★" * 60)
+        print("\n" + "#" * 60)
+        print(f" Final Summary: {dataset_name} | {N_REPEATS} Rounds Mean ± Std   ")
+        print(f" Official Expected Files: {official_expected_count} | Found Local Files: {len(file_list)}")
+        print("" * 60)
 
         metric_cols = ["Model_Time(s)", "Total_Time(s)", "Affiliation-F1", "VUS-PR", "Range-F1"]
 
